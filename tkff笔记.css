@@ -1,0 +1,133 @@
+CSS 的使用
+内联(inline style attribute)
+<head> 标签内的 <style> 标签
+<link> 标签中的外联
+
+
+
+三种主要的选择器
+元素选择器
+class 选择器
+id 选择器
+
+
+
+样式优先级(从高到低)
+!important
+内联样式
+<style> 中的样式
+link 中的样式
+
+
+
+选择器优先级(从低到高)
+!important
+内联样式
+id 选择器
+class 选择器
+元素选择器
+
+
+
+盒模型
+内容
+padding
+border
+margin
+
+
+
+元素定位
+static relative absolute fixed
+非 static 元素可以用 top left bottom right 属性来设置坐标
+relative 是相对定位
+absolute 完全绝对定位, 忽略其他所有东西, 往上浮动到 relative 的元素
+fixed 基于 window 的绝对定位, 不随页面滚动改变
+
+
+
+display 属性
+block inline inline-block
+
+block
+占一行
+默认 block 的标签有
+div p ul ol li h1 h2 h3 h4 h5 h6
+每个block(块元素)之间会有一个换行,而且每个块元素会占浏览器窗口的整个宽度
+正常的页面流中,两个块元素上下相邻的外边距会折叠为最大外边距的大小
+
+inline
+只占 content 的尺寸
+
+inline-block
+inline 布局 block 模式
+inline-block 对外表现为 inline，所以可以放在一行
+对内表现为 block，所以可以设置宽高
+
+
+水平居中样式 水平居中样式  水平居中样式:
+margin: 0 auto;
+block 元素才可以用这个居中
+inline 元素要用 text-align: center
+
+
+ 垂直居中样式 垂直居中样式 垂直居中样式
+<style>
+    .vertical-center {
+        top: 50%;
+        position: relative;
+        transform: translateY(-50%);
+    }
+</style>
+
+
+定位 定位 定位:
+float 浮动: 即作用的元素浮动在 流 中,如果作用在一个图像上,那么页面中的文本就会围绕着它
+
+positon 定位:
+
+absolute absolute absolute
+absolute 绝对定位: 确定需要一个元素出现在页面中的某个精确位置上,那就应该选择绝对定位
+可以为这个元素设置指定一个绝对位置,这是相对于页面指定的(一般是<html>即当前 body
+页面除非你自行指定了另外一个父元素)
+#div {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+}
+
+fixed fixed fixed :
+fixed  固定定位:被设置固定定位的元素 它将总是固定在页面上, 即使滚动页面, 它依然留在原地
+如下:
+注意这里的 top 和 left 设置的距离是 距离浏览器窗口的偏移量,一旦采用固定定位的方式定位
+放置内容,它就会一直停留在你指定的位置,不再移动,即使你滚动页面,它也原地不动
+.div {
+    position: fixed;
+    top: 300px;
+    left: 100px;
+}
+
+relative 相对定位: 生成相对定位的元素，相对于其正常位置进行定位。存在流中
+并不是所有的元素 都拥有 z-index 样式 ;只有使用CSS 绝对定位,相对定位和固定定位的元素才
+拥有 z-index  (即可以使用 z-index )
+
+
+圆角（border-radius），
+阴影（box-shadow）
+旋转（transform）
+
+BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。
+
+
+Readonly和Disabled是用在表单中的两个属性，它们都能够做到使用户不能够更改表单域中的内容。但是它们之间有着微小的差别，总结如下：
+Readonly只针对input(text / password)和textarea有效，而disabled对于所有的表单元素都有效，包括select, radio, checkbox, button等。
+但是表单元素在使用了disabled后，当我们将表单以POST或GET的方式提交的话，这个元素的值不会被传递出去，而readonly会将该值传递出去（这种情况出现在我们将某个表单中的textarea元素设置为disabled或readonly，但是submit button却是可以使用的）
+
+
+/*
+
+
+
+
+
+*/
