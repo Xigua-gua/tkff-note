@@ -54,13 +54,8 @@ class HomeView extends Component {
     return (
       <div>
         <div className="android-be-together-section mdl-typography--text-center">
-          <div className="logo-font android-slogan">be together. not the same.</div>
-          <div className="logo-font android-sub-slogan">welcome to android... be yourself. do your thing. see what's going on.</div>
-          <div className="logo-font android-create-character">
-            <a href=""><img src="images/andy.png" /> create your android character</a>
-          </div>
           <a onClick={()=>this.scrollToAnchor('screens')}>
-            <button className="android-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
+            <button>
               <i className="material-icons">expand_more</i>
             </button>
           </a>
