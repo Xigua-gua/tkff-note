@@ -1,4 +1,4 @@
-//金钱格式
+//金钱格式 /货币价格
 var number = 99999
 var option = { style: 'currency',currency: 'CNY'} 
 var res = number.toLocaleString('zn-CN',option)
