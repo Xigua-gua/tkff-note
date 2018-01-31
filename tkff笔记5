@@ -5,7 +5,7 @@ var res = number.toLocaleString('zn-CN',option)
 "￥99,999.00"
 
 
-//计算经纬度 直接的距离
+//计算经纬度 之间的距离
 var earthR = 6378137.0;
 function getDistance(latA, lngA, latB, lngB) {
 	var pi180 = Math.PI / 180;
@@ -24,3 +24,7 @@ function getDistance(latA, lngA, latB, lngB) {
 	var distance = alpha * earthR;
 	return distance;
 }
+/*
+
+
+*/
