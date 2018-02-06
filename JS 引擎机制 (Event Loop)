@@ -10,5 +10,6 @@ micro-task(微任务)：process.nextTick, Promise, Object.observe(已废弃), Mu
 setTimeout(function(){
     console.log('执行了')
 },3000)
-我们一般会说：3秒后，会执行setTimeout里的那个函数，但是这种说法并不严谨，准确的解释是：3秒后，setTimeout里的函数会被推入事件队列(Event Loop)，而事件队列(Event Loop)里的任务，只有在主线程空闲时才会执行，所以条件只有同时满足(ps:3秒后并且主线程空闲)时，才会3秒后执行函数
+我们一般会说：3秒后，会执行setTimeout里的那个函数，但是这种说法并不严谨，准确的解释是：3秒后，setTimeout里的函数会被推入事件队列(Event Loop)，
+而事件队列(Event Loop)里的任务，只有在主线程空闲时才会执行，所以条件只有同时满足(ps:3秒后并且主线程空闲)时，才会3秒后执行函数
 
