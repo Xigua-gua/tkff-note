@@ -1,2 +1,7 @@
-参考
+参考 来源：掘金
 https://juejin.im/post/5a61a6786fb9a01cc026522c
+
+
+macro-task(宏任务)：script(整体代码), setTimeout, setInterval, setImmediate, I/O, UI rendering。
+micro-task(微任务)：process.nextTick, Promise, Object.observe(已废弃), MutationObserver(html5新特性)
+
