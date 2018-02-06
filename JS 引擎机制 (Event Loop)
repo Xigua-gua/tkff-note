@@ -5,3 +5,10 @@ https://juejin.im/post/5a61a6786fb9a01cc026522c
 macro-task(宏任务)：script(整体代码), setTimeout, setInterval, setImmediate, I/O, UI rendering。
 micro-task(微任务)：process.nextTick, Promise, Object.observe(已废弃), MutationObserver(html5新特性)
 
+定时器指定某些代码在多少时间之后执行这叫做”定时器”（timer）功能，也就是定时执行的代码。
+例子3：
+setTimeout(function(){
+    console.log('执行了')
+},3000)
+我们一般会说：3秒后，会执行setTimeout里的那个函数，但是这种说法并不严谨，准确的解释是：3秒后，setTimeout里的函数会被推入事件队列(Event Loop)，而事件队列(Event Loop)里的任务，只有在主线程空闲时才会执行，所以条件只有同时满足(ps:3秒后并且主线程空闲)时，才会3秒后执行函数
+
