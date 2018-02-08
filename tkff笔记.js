@@ -1,8 +1,5 @@
 
 
-
-log 大法 log 大法 log 大法
-log 大法 :
 var log = function() {
     console.log.apply(console, arguments)
 }
