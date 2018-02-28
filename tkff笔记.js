@@ -120,16 +120,24 @@ log('序列化后的字符串', typeof s, s)
 var a = JSON.parse(s)
 log('反序列化后的数组', typeof a, a)
 
-
+补零函数:
+var buly = function(str) {
+    let res = str + ''
+    if(res.length < 2) {
+        res = '0' + res
+    }
+    return res
+}
 时间函数 时间函数 时间函数 时间函数
 var currentTime = function() {
     var d = new Date()
-    var month = d.getMonth() + 1
-    var date = d.getDate()
-    var hours = d.getHours()
-    var minutes = d.getMinutes()
-    var seconds = d.getSeconds()
-    var timeString = `${month}/${date} ${hours}:${minutes}:${seconds}`
+    var year = d.getFullYear()
+    var month = buly(d.getMonth() + 1)
+    var date = buly(d.getDate())
+    var hours = buly(d.getHours())
+    var minutes = buly(d.getMinutes())
+    var seconds = buly(d.getSeconds())
+    var timeString = `${year} ${month}/${date} ${hours}:${minutes}:${seconds}`
     return timeString
 }
 
