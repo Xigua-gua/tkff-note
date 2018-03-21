@@ -34,7 +34,7 @@ document.querySelector("#roll1").onclick = function(){
 } 
 <button id="roll1">scrollIntoView</button>  
 <div id="roll1_top">  
-  scrollIntoView(ture)元素上边框与视窗顶部齐平  
+//   scrollIntoView(ture)元素上边框与视窗顶部齐平  
   <span id="bottom">scrollIntoView(false)元素下边框与视窗底部齐平</span>  
 </div> 
 比如：
@@ -53,14 +53,14 @@ class HomeView extends Component {
   render() {
     return (
       <div>
-        <div className="android-be-together-section mdl-typography--text-center">
+        <div>
           <a onClick={()=>this.scrollToAnchor('screens')}>
             <button>
               <i className="material-icons">expand_more</i>
             </button>
           </a>
         </div>
-        <div className="mdl-grid" style={{height: 800}}>
+        <div style={{height: 800}}>
           <a id="screens"></a>
           跳到这里
           <br />
