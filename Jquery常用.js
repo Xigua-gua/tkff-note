@@ -79,48 +79,7 @@ $("[href$='.jpg']") 选取所有 href 值以 ".jpg" 结尾的元素。
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-eq 概述  eq 概述 eq 概述 :获取第N个元素
+eq 概述 :获取第N个元素
 /获取匹配的第二个元素   eq(index) 的用法  参数index描述 和 参数-index描述: eq(-index)
 //HTML 代码:
 <p> This is just a test.</p> <p> So is this</p>
