@@ -1,0 +1,5 @@
+https://www.cnblogs.com/chunlei36/p/6262469.html
+
+cd ~/.atom/packages
+
+apm install <package name>
