@@ -1,3 +1,7 @@
+
+
+http://www.ruanyifeng.com/blog/2017/05/websocket.html
+
 websocket = null;  
 url="127.xxxxxxx/xxx"  
 var websocketAddress = 'ws://'+ url  ;
@@ -39,3 +43,7 @@ $scope.send = function(){
 $scope.closeWebSocket = function(){  
     websocket.close();  
 }  
+
+
+
+//
