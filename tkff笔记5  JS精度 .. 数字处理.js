@@ -27,6 +27,8 @@ function getDistance(latA, lngA, latB, lngB) {
 
 //JS浮点数陷阱及解法
 https://juejin.im/post/59f9e26f6fb9a0452724ea32
+//github
+https://github.com/nefe/number-precision
 
 /*
 
