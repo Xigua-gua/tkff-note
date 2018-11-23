@@ -1,19 +1,6 @@
 
 import XLSX from 'xlsx';
 
-const models =   {
-    "JZX":"集装箱",
-    "XS":"厢式",
-    "GL":"高栏",
-    "DL":"低栏",
-    "PB":"平板",
-    "KDG":"开顶柜",
-    "LC":"冷藏",
-  }
-
-export function getModelName(v) {
-  return models[v]
-}
 
 export function getObjUrl(hash) {
   let obj_url
@@ -145,11 +132,12 @@ export function currentTime() {
     return timeString
 }
 
+//车牌验证
 export function isLicensePlate(str) {
     return /^(([京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领][A-Z](([0-9]{5}[DF])|([DF]([A-HJ-NP-Z0-9])[0-9]{4})))|([京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领][A-Z][A-HJ-NP-Z0-9]{4}[A-HJ-NP-Z0-9挂学警港澳使领]))$/.test(str);
 }
 
-
+//
 export function downloadExl(list_name,json, type) {
     let tmpDown //导出的二进制对象
     let tmpdata = json[0];
@@ -274,6 +262,7 @@ export function diffArray(arr1,arr2) {
   return arr1;
 }
 
+//取交集
 export function commonArray(arr1,arr2) {
   let common_arr = []
   for (var i = 0; i < arr2.length; i++) {
@@ -285,4 +274,27 @@ export function commonArray(arr1,arr2) {
     }
   }
   return common_arr;
+}
+
+
+//数组 元素交换位置
+export function swapItems(arr, index1, index2){
+　　arr[index1] = arr.splice(index2,1,arr[index1])[0]
+　　return arr
+}
+
+// 目标元素上移
+export function upData(arr, index) {
+　if (arr.length > 1 && index !== 0) {
+    var newArr = swapItems(arr, index, index - 1)
+　}
+  return newArr;
+}
+
+//目标元素 下移
+export function downData(arr, index) {
+  if (arr.length > 1 && index !== (arr.length - 1)) {
+　   var newArr = swapItems(arr, index, index + 1)
+　}
+  return newArr;
 }
