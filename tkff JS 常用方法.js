@@ -1,3 +1,12 @@
+//数字添加逗号
+//如: 12000000.11 转化为 12,000,000.11。
+commay(num) {
+    let arr = num.toString().split('.')
+    return Array.from(arr[0]).reverse().map((n, i) => {
+        return (n === '-' || i === 0 || i%3 !== 0 ) ? n : n + ','
+    }).reverse().join('').concat(arr[1] ? '.' + arr[1] : '')
+}
+
 
 // type类型 检验
 isString (o) { //是否字符串
