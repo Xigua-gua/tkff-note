@@ -71,3 +71,39 @@ class HomeView extends Component {
 }
 
 export default HomeView;
+
+
+// ==========================
+// PC端滚动加载更多的实现方法
+//滚动加载更多
+var pullRefreshss = true;
+$(window).scroll(
+    function () {
+        /*当前滚动条到顶部的距离*/
+        var top = $(document).scrollTop();
+        /*当前浏览器的可是高度*/
+        var height = document.body.clientHeight;
+        /*当前网页（body）的高度*/
+        var z_height = $(document).height();
+        /*判断（网页的body高度减去当前浏览器的可视高度是否等于滚动条到顶部的距离）
+         * 相等：则判定当前页面在底部
+         * 不相等：判定当前页面不在底部
+         * */
+        
+        var stats = (z_height - height - top < 1);
+        //console.log(stats)
+
+        if (stats) {
+            /*当前网页在最底部，执行该函数*/
+            endIndex += 4;   //每次加载的条数 endIndex 为默认显示的条数
+            console.log(endIndex)
+            setTimeout(navList, 1000);  // navList()为加载列表的方法  控制滚动加载显示的时间
+          /*  navList(); */       //调用加载列表的方法
+        } else {
+            if (!pullRefreshss) {
+                $("#articleListM").html("没有更多的数据");
+            }
+        }
+    }
+);
+// ————————————————
